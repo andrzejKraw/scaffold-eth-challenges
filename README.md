@@ -10,7 +10,7 @@
 
 ## Deployment info
 
-Contract address on Ropsten: 0x8C1263C9dAFA1402246c4Fb4673254DFCcacEf60 
+Contract address on Ropsten: 0x8C1263C9dAFA1402246c4Fb4673254DFCcacEf60  
 Deployed via Surge: https://dusty-library.surge.sh/ 
 
 ---
