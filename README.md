@@ -17,6 +17,17 @@
 
 🧫 Everything starts by ✏️ Editing `YourToken.sol` in `packages/hardhat/contracts`
 
+### Completed checkpoints 
+- [x] Checkpoint 0
+- [x] Checkpoint 1
+- [x] Checkpoint 2
+- [x] Checkpoint 3
+- [x] Checkpoint 4
+- [ ] Checkpoint 5
+- [ ] Checkpoint 6
+- [ ] Checkpoint 7
+
+
 ---
 
 ### Checkpoint 0: 📦 install 📚
