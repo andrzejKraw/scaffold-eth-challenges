@@ -15,22 +15,24 @@ contract Vendor is Ownable {
     yourToken = YourToken(tokenAddress);
   }
 
-  // ToDo: create a payable buyTokens() function:
   function buyTokens() public payable {
     uint256 tokensToTransfer = msg.value * tokensPerEth;
     bool sent = yourToken.transfer(msg.sender, tokensToTransfer);
-    require(sent, "Something went wrong with transferring tokens");
+    require(sent, "Something went wrong with token transfer");
     emit BuyTokens(msg.sender, msg.value, tokensToTransfer);
   }
 
-  // ToDo: create a withdraw() function that lets the owner withdraw ETH
+  // disabling withdrawals for liquidity preserving
+  
+  // function withdraw() public onlyOwner {
+  //   (bool success, ) = msg.sender.call{value: address(this).balance}("");
+  //   require(success, "Something went wrong withdrawing ether");
+  // }
 
-  function withdraw() public onlyOwner {
-    (bool success, ) = msg.sender.call{value: address(this).balance}("");
-    require(success, "Something went wrong withdrawing ether");
-    
+  function sellTokens(uint256 amount) public {
+    bool tokensSent = yourToken.transferFrom(msg.sender, address(this), amount);
+    require(tokensSent, "Something went wrong with token transfer");
+    (bool success, ) = msg.sender.call{value: amount/tokensPerEth}("");
+    require(success, "Something went wrong with ether transfer");
   }
-  // ToDo: create a sellTokens() function:
-
-
 }

@@ -621,7 +621,6 @@ function App(props) {
               </Card>
             </div>
           
-            {/* 
             
             Extra UI for buying the tokens back from the user using "approve" and "sellTokens"
             <Divider />
@@ -676,7 +675,7 @@ function App(props) {
             </div>
             
             
-            */}
+            
 
             <div style={{ padding: 8, marginTop: 32 }}>
               <div>Vendor Token Balance:</div>
